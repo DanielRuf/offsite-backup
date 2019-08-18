@@ -29,8 +29,8 @@ set backupname=%datestr%_%timestr%
 
 :: SSH connection settings, please change them
 set ssh_hostkey=43:51:43:a1:b5:fc:8b:b7:0a:3a:a9:b1:0f:66:73:a8
-set ssh_user=user
 set ssh_host=localhost
+set ssh_user=user
 set ssh_password=pass
 
 
