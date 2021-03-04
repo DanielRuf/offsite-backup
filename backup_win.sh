@@ -69,14 +69,14 @@ $connection_plink "mysqldump -u $db_user -p'$db_password' $db_name --result-file
 
 
 # create local backup directory
-mkdir $backupname && echo created local backup directory
+mkdir "$backupname" && echo created local backup directory
 
 
 # download remote files backup
-$connection_pscp:$backups_path/$backupname/$backupname"_files.tar.gz" $backupname && echo downloaded remote files backup
+"$connection_pscp":$backups_path/"$backupname"/"$backupname""_files.tar.gz" "$backupname" && echo downloaded remote files backup
 
 # download remote database backup
-$connection_pscp:$backups_path/$backupname/$backupname"_database.sql" $backupname && echo downloaded remote database backup
+"$connection_pscp":$backups_path/"$backupname"/"$backupname""_database.sql" "$backupname" && echo downloaded remote database backup
 
 
 # delete remote files backup
